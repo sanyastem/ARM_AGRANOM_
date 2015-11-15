@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ARM_AGRANOM_
 {
-    public partial class MainWindow : Form
+    public partial class AdminWindow : Form
     {
-        public MainWindow()
+        public AdminWindow()
         {
             InitializeComponent();
         }
