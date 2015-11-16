@@ -18,10 +18,10 @@ namespace ARM_AGRANOM_
         }
 
         private void btnAdmin_Click(object sender, EventArgs e)
-        {   if(){
+        {   
             AdminWindow mainform = new AdminWindow();
             mainform.Show();
-        }
+        
         }     
     }
 }
