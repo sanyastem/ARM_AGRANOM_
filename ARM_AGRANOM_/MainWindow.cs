@@ -12,9 +12,14 @@ namespace ARM_AGRANOM_
 {
     public partial class MainWindow : Form
     {
+        
+	        
+
+        
         public MainWindow()
         {
             InitializeComponent();
+            
         }
 
         private void btnAdmin_Click(object sender, EventArgs e)
@@ -22,6 +27,43 @@ namespace ARM_AGRANOM_
             AdminWindow mainform = new AdminWindow();
             mainform.Show();
         
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void MainWindow_Load(object sender, EventArgs e)
+        {
+           
+            
+          
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+           
         }     
     }
 }
