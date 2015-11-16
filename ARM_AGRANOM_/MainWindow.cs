@@ -12,9 +12,9 @@ namespace ARM_AGRANOM_
 {
     public partial class MainWindow : Form
     {
-        
-	        
 
+
+        ShowingForm formsShowing = new ShowingForm();
         
         public MainWindow()
         {
@@ -31,39 +31,42 @@ namespace ARM_AGRANOM_
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            
+            formsShowing.ShowDialog();
         }
 
         private void MainWindow_Load(object sender, EventArgs e)
         {
-           
             
-          
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-           
+            formsShowing.ShowDialog();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            
+            formsShowing.ShowDialog();
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            
+            formsShowing.ShowDialog();
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            
+            formsShowing.ShowDialog();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-           
+            formsShowing.ShowDialog();
+        }
+
+        private void pictureBox2_DoubleClick(object sender, EventArgs e)
+        {
+            formsShowing.ShowDialog();
         }     
     }
 }
