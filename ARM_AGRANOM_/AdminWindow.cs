@@ -29,7 +29,7 @@ namespace ARM_AGRANOM_
             SqlConnection myConn = new SqlConnection(myConnection);
             SqlCommand selectCommand =
                 new SqlCommand(
-                    "SELECT * FROM Admins WHERE Login='" + txtLogin.Text + "' and Password='" + txtPassword.Text +
+                    "SELECT * FROM Admins WHERE Login='" + textBox1.Text + "' and Password='" + textBox2.Text +
                     "'", myConn);
             SqlDataReader reader;
             myConn.Open();
@@ -55,6 +55,12 @@ namespace ARM_AGRANOM_
             }
 
             myConn.Close();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            RegistrationForm a = new RegistrationForm();
+            a.ShowDialog();
         }
     }
 }

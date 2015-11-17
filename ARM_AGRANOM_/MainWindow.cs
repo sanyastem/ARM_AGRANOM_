@@ -67,6 +67,11 @@ namespace ARM_AGRANOM_
         private void pictureBox2_DoubleClick(object sender, EventArgs e)
         {
             formsShowing.ShowDialog();
+        }
+
+        private void выходToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }     
     }
 }
