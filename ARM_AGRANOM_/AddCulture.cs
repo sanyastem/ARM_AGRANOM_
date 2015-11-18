@@ -34,6 +34,7 @@ namespace ARM_AGRANOM_
 
         private void AddCulture_Load(object sender, EventArgs e)
         {
+            this.StartPosition = FormStartPosition.CenterScreen;
             // TODO: данная строка кода позволяет загрузить данные в таблицу "aRM_AGRONOMDataSet.Kulture". При необходимости она может быть перемещена или удалена.
             this.kultureTableAdapter.Fill(this.aRM_AGRONOMDataSet.Kulture);
 

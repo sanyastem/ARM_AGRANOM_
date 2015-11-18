@@ -20,6 +20,7 @@ namespace ARM_AGRANOM_
 
         private void AddNaselen_Load(object sender, EventArgs e)
         {
+            this.StartPosition = FormStartPosition.CenterScreen;
             // TODO: данная строка кода позволяет загрузить данные в таблицу "aRM_AGRONOMDataSet11.Naseln". При необходимости она может быть перемещена или удалена.
             this.naselnTableAdapter.Fill(this.aRM_AGRONOMDataSet11.Naseln);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "aRM_AGRONOMDataSet2.Oblast". При необходимости она может быть перемещена или удалена.

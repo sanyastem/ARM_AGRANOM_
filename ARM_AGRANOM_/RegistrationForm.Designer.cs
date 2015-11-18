@@ -110,6 +110,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "RegistrationForm";
             this.Text = "Регистрация";
+            this.Load += new System.EventHandler(this.RegistrationForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

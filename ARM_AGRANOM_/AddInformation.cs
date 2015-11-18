@@ -20,6 +20,7 @@ namespace ARM_AGRANOM_
 
         private void AddInformation_Load(object sender, EventArgs e)
         {
+            this.StartPosition = FormStartPosition.CenterScreen;
             // TODO: данная строка кода позволяет загрузить данные в таблицу "aRM_AGRONOMDataSet.Osnovnoe". При необходимости она может быть перемещена или удалена.
             this.osnovnoeTableAdapter.Fill(this.aRM_AGRONOMDataSet.Osnovnoe);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "aRM_AGRONOMDataSet.Kulture". При необходимости она может быть перемещена или удалена.

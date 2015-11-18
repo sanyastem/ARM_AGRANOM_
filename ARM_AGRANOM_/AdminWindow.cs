@@ -62,5 +62,10 @@ namespace ARM_AGRANOM_
             RegistrationForm a = new RegistrationForm();
             a.ShowDialog();
         }
+
+        private void AdminWindow_Load(object sender, EventArgs e)
+        {
+            this.StartPosition = FormStartPosition.CenterScreen;
+        }
     }
 }

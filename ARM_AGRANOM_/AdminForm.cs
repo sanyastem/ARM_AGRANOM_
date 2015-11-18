@@ -32,6 +32,7 @@ namespace ARM_AGRANOM_
 
         private void AdminForm_Load(object sender, EventArgs e)
         {
+            this.StartPosition = FormStartPosition.CenterScreen;
             // TODO: данная строка кода позволяет загрузить данные в таблицу "aRM_AGRONOMDataSet2.Oblast". При необходимости она может быть перемещена или удалена.
             this.oblastTableAdapter.Fill(this.aRM_AGRONOMDataSet2.Oblast);
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -43,6 +44,7 @@ namespace ARM_AGRANOM_
 
         private void button3_Click(object sender, EventArgs e)
         {
+            comboBox2.SelectedIndex = 0;
             DataBase db = new DataBase();
             dataGridView1.DataSource = db.SetAdminAll(comboBox2.SelectedIndex+7);
             dataGridView1.Refresh();

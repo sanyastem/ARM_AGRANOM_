@@ -34,6 +34,7 @@ namespace ARM_AGRANOM_
 
         private void VidPochvy_Load(object sender, EventArgs e)
         {
+            this.StartPosition = FormStartPosition.CenterScreen;
             // TODO: данная строка кода позволяет загрузить данные в таблицу "aRM_AGRONOMDataSet11.Vid". При необходимости она может быть перемещена или удалена.
             this.vidTableAdapter.Fill(this.aRM_AGRONOMDataSet11.Vid);
 

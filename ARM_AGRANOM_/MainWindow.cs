@@ -39,7 +39,7 @@ namespace ARM_AGRANOM_
 
         private void MainWindow_Load(object sender, EventArgs e)
         {
-            
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

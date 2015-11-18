@@ -60,7 +60,7 @@ namespace ARM_AGRANOM_
         }
         private void ShowingForm_Load(object sender, EventArgs e)
         {
-
+            this.StartPosition = FormStartPosition.CenterScreen;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 

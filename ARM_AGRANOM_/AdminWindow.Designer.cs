@@ -127,6 +127,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "AdminWindow";
             this.Text = "Окно администратора";
+            this.Load += new System.EventHandler(this.AdminWindow_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);

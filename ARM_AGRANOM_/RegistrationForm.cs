@@ -40,5 +40,10 @@ namespace ARM_AGRANOM_
                 MessageBox.Show("Пароль не совпадает!", "ERROR!!!");
             }
         }
+
+        private void RegistrationForm_Load(object sender, EventArgs e)
+        {
+            this.StartPosition = FormStartPosition.CenterScreen;
+        }
     }
 }

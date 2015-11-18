@@ -20,6 +20,7 @@ namespace ARM_AGRANOM_
 
         private void AddPole_Load(object sender, EventArgs e)
         {
+            this.StartPosition = FormStartPosition.CenterScreen;
             // TODO: данная строка кода позволяет загрузить данные в таблицу "aRM_AGRONOMDataSet.Pole". При необходимости она может быть перемещена или удалена.
             this.poleTableAdapter.Fill(this.aRM_AGRONOMDataSet.Pole);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "aRM_AGRONOMDataSet.Vid". При необходимости она может быть перемещена или удалена.
