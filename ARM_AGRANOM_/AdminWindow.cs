@@ -25,11 +25,11 @@ namespace ARM_AGRANOM_
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string myConnection = "Data Source=АЛЕКСАНДР-ПК;Initial Catalog=TeacherProject;Integrated Security=True";
+            string myConnection = "Data Source=STEM;Initial Catalog=ARM_AGRONOM;Integrated Security=True";
             SqlConnection myConn = new SqlConnection(myConnection);
             SqlCommand selectCommand =
                 new SqlCommand(
-                    "SELECT * FROM Admins WHERE Login='" + textBox1.Text + "' and Password='" + textBox2.Text +
+                    "SELECT * FROM Admins WHERE Admin='" + textBox1.Text + "' and Password='" + textBox2.Text +
                     "'", myConn);
             SqlDataReader reader;
             myConn.Open();

@@ -26,6 +26,7 @@ namespace ARM_AGRANOM_
         {   
             AdminWindow mainform = new AdminWindow();
             mainform.Show();
+            this.Hide();
         
         }
 
