@@ -48,6 +48,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddCulture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCulture.Designer.cs">
+      <DependentUpon>AddCulture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddInformation.Designer.cs">
+      <DependentUpon>AddInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddNaselen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNaselen.Designer.cs">
+      <DependentUpon>AddNaselen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddPole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPole.Designer.cs">
+      <DependentUpon>AddPole.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +119,24 @@
     <Compile Include="ShowingForm.Designer.cs">
       <DependentUpon>ShowingForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="VidPochvy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VidPochvy.Designer.cs">
+      <DependentUpon>VidPochvy.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddCulture.resx">
+      <DependentUpon>AddCulture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddInformation.resx">
+      <DependentUpon>AddInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddNaselen.resx">
+      <DependentUpon>AddNaselen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddPole.resx">
+      <DependentUpon>AddPole.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -119,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ShowingForm.resx">
       <DependentUpon>ShowingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VidPochvy.resx">
+      <DependentUpon>VidPochvy.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ARM_AGRONOMDataSet.xsc">
       <DependentUpon>ARM_AGRONOMDataSet.xsd</DependentUpon>

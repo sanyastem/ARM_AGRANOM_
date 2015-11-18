@@ -77,5 +77,24 @@ namespace ARM_AGRANOM_
         {
            
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            for (int i = dataGridView1.CurrentCell.RowIndex + 1; i <= dataGridView1.RowCount; ++i)
+            {
+                if (i + 1 >= dataGridView1.RowCount)
+                {
+                    dataGridView1.CurrentCell = dataGridView1[0, 0];
+                    MessageBox.Show("Поиск завершён", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    textBox1.Text = null;
+                    break;
+                }
+                else if (dataGridView1[1, i].Value.ToString().Contains(textBox1.Text))
+                {
+                    dataGridView1.CurrentCell = dataGridView1[0, i];
+                    break;
+                }
+            }
+        }
     }
 }
