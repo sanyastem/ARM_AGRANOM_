@@ -142,14 +142,14 @@ namespace Yore
             CloseConnection();
             return dt;
         }
-        public DataTable SetOKR(string a, string value2)
+        public DataTable SetAll()
         {
             OpenConnection();
             DataTable dt = new DataTable();
-            string sql = ("SELECT Students.FIO,Grups.Name, Discipliny.Vid_discipline, [Type].Naimenovanie, Osnavnaya.Otmetka"
- + " FROM Students, Osnavnaya, Grups, Discipliny, [Type] "
- + " WHERE Osnavnaya.Id_discep = Discipliny.Id_discep AND Osnavnaya.id_students = Students.id_students AND Osnavnaya.id_tip = [Type].id_tip AND Students.id_grups = Grups.id_grups"
- + " AND Grups.Name = '" + a + "' AND Discipliny.Vid_discipline = '" + value2 + "' AND [Type].Naimenovanie = 'ОКР'");
+            string sql = ("SELECT Oblast.Название,Naseln.Название,Pole.Название,Vid.Название,Pole.Размер,Kulture.Название,Osnovnoe.Урожай,Osnovnoe.God"
++" FROM Oblast,Naseln,Pole,Vid,Kulture,Osnovnoe "
++" Where Oblast.id_oblast=Naseln.id_oblast AND Naseln.id_oblast=Oblast.id_oblast AND Pole.id_vid=Vid.id_vid AND Pole.id_nasel=Naseln.id_nasel AND Osnovnoe.id_kultr=Kulture.id_kult"
++" AND Osnovnoe.id_pole=Pole.id_pole");
             using (SqlCommand cmd = new SqlCommand(sql, connect))
             {
                 SqlDataReader dr = cmd.ExecuteReader();
