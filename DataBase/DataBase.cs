@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-namespace DataBase
+namespace Yore
 {
     public class DataBase
     {
@@ -39,13 +39,14 @@ namespace DataBase
                 }
             }
         }
-        public DataTable SelectOcenciFiltr(string value1, string value2)
+        public DataTable SelectGrodno()
         {
             OpenConnection();
             DataTable dt = new DataTable();
-            string sql = ("SELECT Grups.Name, Discipliny.Vid_discipline, [Type].Naimenovanie, Specialnost.Vid_specialnosti, Osnavnaya.Otmetka,Students.FIO " +
-                          " FROM Osnavnaya, Grups, Discipliny, Specialnost, [Type],Students" +
-                          " WHERE Osnavnaya.Id_discep = Discipliny.Id_discep AND Osnavnaya.id_students = Students.id_students AND Osnavnaya.id_specialnost = Specialnost.Id_specialnost AND Osnavnaya.id_tip = [Type].id_tip AND Grups.id_grups = '" + value1 + "' AND Discipliny.id_discep = '" + value2 + "'");
+            string sql = ("SELECT Naseln.Название,Pole.Название,Vid.Название,Pole.Размер,Kulture.Название,Osnovnoe.Урожай,Osnovnoe.God"
++" FROM Oblast,Naseln,Pole,Vid,Kulture,Osnovnoe"
++" Where Oblast.id_oblast=Naseln.id_oblast AND Naseln.id_oblast='7' AND Pole.id_nasel=Naseln.id_nasel AND Vid.id_vid=Pole.id_vid "
++" AND Pole.id_pole=Osnovnoe.id_pole AND Kulture.id_kult=Osnovnoe.id_kultr");
             using (SqlCommand cmd = new SqlCommand(sql, connect))
             {
                 SqlDataReader dr = cmd.ExecuteReader();
@@ -56,6 +57,91 @@ namespace DataBase
             return dt;
         }
 
+        public DataTable SelectMinsk()
+        {
+            OpenConnection();
+            DataTable dt = new DataTable();
+            string sql = ("SELECT Naseln.Название,Pole.Название,Vid.Название,Pole.Размер,Kulture.Название,Osnovnoe.Урожай,Osnovnoe.God"
++" FROM Oblast,Naseln,Pole,Vid,Kulture,Osnovnoe"
++" Where Oblast.id_oblast=Naseln.id_oblast AND Naseln.id_oblast='8' AND Pole.id_vid=Vid.id_vid AND Pole.id_nasel=Naseln.id_nasel AND Osnovnoe.id_kultr=Kulture.id_kult"
++" AND Osnovnoe.id_pole=Pole.id_pole");
+            using (SqlCommand cmd = new SqlCommand(sql, connect))
+            {
+                SqlDataReader dr = cmd.ExecuteReader();
+                dt.Load(dr);
+                dr.Close();
+            }
+            CloseConnection();
+            return dt;
+        }
+        public DataTable SelectBrest()
+        {
+            OpenConnection();
+            DataTable dt = new DataTable();
+            string sql = ("SELECT Naseln.Название,Pole.Название,Vid.Название,Pole.Размер,Kulture.Название,Osnovnoe.Урожай,Osnovnoe.God"
++ " FROM Oblast,Naseln,Pole,Vid,Kulture,Osnovnoe"
++ " Where Oblast.id_oblast=Naseln.id_oblast AND Naseln.id_oblast='9' AND Pole.id_nasel=Naseln.id_nasel AND Vid.id_vid=Pole.id_vid "
++ " AND Pole.id_pole=Osnovnoe.id_pole AND Kulture.id_kult=Osnovnoe.id_kultr");
+            using (SqlCommand cmd = new SqlCommand(sql, connect))
+            {
+                SqlDataReader dr = cmd.ExecuteReader();
+                dt.Load(dr);
+                dr.Close();
+            }
+            CloseConnection();
+            return dt;
+        }
+        public DataTable SelectGomel()
+        {
+            OpenConnection();
+            DataTable dt = new DataTable();
+            string sql = ("SELECT Naseln.Название,Pole.Название,Vid.Название,Pole.Размер,Kulture.Название,Osnovnoe.Урожай,Osnovnoe.God"
++ " FROM Oblast,Naseln,Pole,Vid,Kulture,Osnovnoe"
++ " Where Oblast.id_oblast=Naseln.id_oblast AND Naseln.id_oblast='10' AND Pole.id_nasel=Naseln.id_nasel AND Vid.id_vid=Pole.id_vid "
++ " AND Pole.id_pole=Osnovnoe.id_pole AND Kulture.id_kult=Osnovnoe.id_kultr");
+            using (SqlCommand cmd = new SqlCommand(sql, connect))
+            {
+                SqlDataReader dr = cmd.ExecuteReader();
+                dt.Load(dr);
+                dr.Close();
+            }
+            CloseConnection();
+            return dt;
+        }
+        public DataTable SelectVitebsk()
+        {
+            OpenConnection();
+            DataTable dt = new DataTable();
+            string sql = ("SELECT Naseln.Название,Pole.Название,Vid.Название,Pole.Размер,Kulture.Название,Osnovnoe.Урожай,Osnovnoe.God"
++ " FROM Oblast,Naseln,Pole,Vid,Kulture,Osnovnoe"
++ " Where Oblast.id_oblast=Naseln.id_oblast AND Naseln.id_oblast='11' AND Pole.id_nasel=Naseln.id_nasel AND Vid.id_vid=Pole.id_vid "
++ " AND Pole.id_pole=Osnovnoe.id_pole AND Kulture.id_kult=Osnovnoe.id_kultr");
+            using (SqlCommand cmd = new SqlCommand(sql, connect))
+            {
+                SqlDataReader dr = cmd.ExecuteReader();
+                dt.Load(dr);
+                dr.Close();
+            }
+            CloseConnection();
+            return dt;
+        }
+        public DataTable SelectMogilev()
+        {
+            OpenConnection();
+            DataTable dt = new DataTable();
+            string sql = ("SELECT Naseln.Название,Pole.Название,Vid.Название,Pole.Размер,Kulture.Название,Osnovnoe.Урожай,Osnovnoe.God"
++ " FROM Oblast,Naseln,Pole,Vid,Kulture,Osnovnoe"
++ " Where Oblast.id_oblast=Naseln.id_oblast AND Naseln.id_oblast='12' AND Pole.id_nasel=Naseln.id_nasel AND Vid.id_vid=Pole.id_vid "
++ " AND Pole.id_pole=Osnovnoe.id_pole AND Kulture.id_kult=Osnovnoe.id_kultr");
+            using (SqlCommand cmd = new SqlCommand(sql, connect))
+            {
+                SqlDataReader dr = cmd.ExecuteReader();
+                dt.Load(dr);
+                dr.Close();
+            }
+            CloseConnection();
+            return dt;
+        }
         public DataTable SetOKR(string a, string value2)
         {
             OpenConnection();

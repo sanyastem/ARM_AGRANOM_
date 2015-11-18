@@ -32,7 +32,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DataBase">
+    <Reference Include="DataBase, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\DataBase\bin\Debug\DataBase.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -58,6 +59,21 @@
     </Compile>
     <Compile Include="AdminWindow.Designer.cs">
       <DependentUpon>AdminWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ARM_AGRONOMDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ARM_AGRONOMDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ARM_AGRONOMDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ARM_AGRONOMDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ARM_AGRONOMDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ARM_AGRONOMDataSet2.xsd</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.cs">
       <SubType>Form</SubType>
@@ -104,6 +120,39 @@
     <EmbeddedResource Include="ShowingForm.resx">
       <DependentUpon>ShowingForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ARM_AGRONOMDataSet.xsc">
+      <DependentUpon>ARM_AGRONOMDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ARM_AGRONOMDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ARM_AGRONOMDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ARM_AGRONOMDataSet.xss">
+      <DependentUpon>ARM_AGRONOMDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ARM_AGRONOMDataSet1.xsc">
+      <DependentUpon>ARM_AGRONOMDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ARM_AGRONOMDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ARM_AGRONOMDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ARM_AGRONOMDataSet1.xss">
+      <DependentUpon>ARM_AGRONOMDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ARM_AGRONOMDataSet2.xsc">
+      <DependentUpon>ARM_AGRONOMDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="ARM_AGRONOMDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ARM_AGRONOMDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ARM_AGRONOMDataSet2.xss">
+      <DependentUpon>ARM_AGRONOMDataSet2.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
