@@ -79,5 +79,10 @@ namespace ARM_AGRANOM_
             AddInformation a = new AddInformation();
             a.ShowDialog();
         }
+
+        private void справкаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, @"help.chm", HelpNavigator.TableOfContents);
+        }
     }
 }

@@ -87,6 +87,11 @@ namespace ARM_AGRANOM_
         private void выходToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void справкаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, @"help.chm", HelpNavigator.TableOfContents);
         }     
     }
 }

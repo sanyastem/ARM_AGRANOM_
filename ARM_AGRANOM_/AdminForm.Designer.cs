@@ -33,23 +33,23 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.oblastBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.aRM_AGRONOMDataSet2 = new ARM_AGRANOM_.ARM_AGRONOMDataSet2();
             this.button3 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.главноеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.пользовательToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.пользовательToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.aRM_AGRONOMDataSet2 = new ARM_AGRANOM_.ARM_AGRONOMDataSet2();
-            this.oblastBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.oblastTableAdapter = new ARM_AGRANOM_.ARM_AGRONOMDataSet2TableAdapters.OblastTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.aRM_AGRONOMDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.oblastBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aRM_AGRONOMDataSet2)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -93,6 +93,16 @@
             this.comboBox2.TabIndex = 3;
             this.comboBox2.ValueMember = "Название";
             // 
+            // oblastBindingSource
+            // 
+            this.oblastBindingSource.DataMember = "Oblast";
+            this.oblastBindingSource.DataSource = this.aRM_AGRONOMDataSet2;
+            // 
+            // aRM_AGRONOMDataSet2
+            // 
+            this.aRM_AGRONOMDataSet2.DataSetName = "ARM_AGRONOMDataSet2";
+            this.aRM_AGRONOMDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(56, 98);
@@ -123,18 +133,12 @@
             this.главноеToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
             this.главноеToolStripMenuItem.Text = "Главное";
             // 
-            // пользовательToolStripMenuItem
-            // 
-            this.пользовательToolStripMenuItem.Name = "пользовательToolStripMenuItem";
-            this.пользовательToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
-            this.пользовательToolStripMenuItem.Text = "Пользователь";
-            this.пользовательToolStripMenuItem.Click += new System.EventHandler(this.пользовательToolStripMenuItem_Click);
-            // 
             // справкаToolStripMenuItem
             // 
             this.справкаToolStripMenuItem.Name = "справкаToolStripMenuItem";
             this.справкаToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.справкаToolStripMenuItem.Text = "Справка";
+            this.справкаToolStripMenuItem.Click += new System.EventHandler(this.справкаToolStripMenuItem_Click);
             // 
             // выходToolStripMenuItem
             // 
@@ -142,6 +146,13 @@
             this.выходToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.выходToolStripMenuItem.Text = "Выход";
             this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
+            // 
+            // пользовательToolStripMenuItem
+            // 
+            this.пользовательToolStripMenuItem.Name = "пользовательToolStripMenuItem";
+            this.пользовательToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
+            this.пользовательToolStripMenuItem.Text = "Пользователь";
+            this.пользовательToolStripMenuItem.Click += new System.EventHandler(this.пользовательToolStripMenuItem_Click);
             // 
             // button4
             // 
@@ -182,16 +193,6 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Выберите область";
             // 
-            // aRM_AGRONOMDataSet2
-            // 
-            this.aRM_AGRONOMDataSet2.DataSetName = "ARM_AGRONOMDataSet2";
-            this.aRM_AGRONOMDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // oblastBindingSource
-            // 
-            this.oblastBindingSource.DataMember = "Oblast";
-            this.oblastBindingSource.DataSource = this.aRM_AGRONOMDataSet2;
-            // 
             // oblastTableAdapter
             // 
             this.oblastTableAdapter.ClearBeforeFill = true;
@@ -217,10 +218,10 @@
             this.Text = "Окно администратора";
             this.Load += new System.EventHandler(this.AdminForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.oblastBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aRM_AGRONOMDataSet2)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.aRM_AGRONOMDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.oblastBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
